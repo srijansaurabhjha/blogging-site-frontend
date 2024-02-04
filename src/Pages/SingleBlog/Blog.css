@@ -1,0 +1,13 @@
+.Blog_container{
+    display: flex;
+    flex-direction: column;
+    padding:1rem 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    z-index: 2;
+}
+
+.content{
+    font-family: sans-serif;
+    white-space: pre-wrap; 
+    word-wrap: break-word;
+}
