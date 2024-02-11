@@ -56,6 +56,16 @@ const SignUp = () => {
     }
   }
 
+  const validateGmail = (email) => {
+    const regex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+    return regex.test(email);
+  };
+
+  const validateEmail = (email) => {
+    const regex = /^[a-zA-Z0-9._%+-]+@mail\.com$/;
+    return regex.test(email);
+  };
+
   const handleSubmit=async()=>{
     try{
       if(name===""||email===""||password===""){
@@ -65,6 +75,16 @@ const SignUp = () => {
         setPic("");
         return;
       }
+
+      if(!validateGmail(email)&&!validateEmail(email)){
+        alert("Enter a valid mail Address")
+        setName("");
+        setEmail("");
+        setPassword("");
+        setPic("");
+        return;
+      }
+
       const res=await axios.post("https://bloggingsitebackend.onrender.com/api/users/signup",{
          name,email,password,pic 
       });
