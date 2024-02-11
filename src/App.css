@@ -19,3 +19,9 @@
 .main_content{
     min-height: calc(100vh - 6vh - 12vh);
 }
+
+@media screen and (max-width:450px){
+    .main_content{
+        padding-top: 2rem;
+    }
+}

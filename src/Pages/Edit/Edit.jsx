@@ -81,7 +81,7 @@ const Edit = () => {
   return (
     <div className='edit_container' >
       <TextField value={title} onChange={(e)=>setTitle(e.target.value)} sx={{alignSelf:'center',width:"80%",margin:"1rem 0"}}/>
-      {file&&<img src={file} style={{height:"20rem",alignSelf:'center'}}/>}
+      {file&&<img className='editBlog_image' src={file} />}
       <label for='file-input'  style={{textAlign:"center",alignSelf:'center',cursor:'pointer',marginTop:'1rem'}}>
          <AddCircleOutlineIcon sx={{fontSize:'3rem',color:'#363062'}}/>
       </label>

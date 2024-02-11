@@ -89,14 +89,14 @@ const EditProfile = () => {
 
   return (
     <div className='editProfile_container'>
-        {pic&&<img src={pic} style={{height:'40vh',alignSelf:'center',marginTop:"1rem",borderRadius:'1rem'}}/>}
+        {pic&&<img className='editProfile_img' src={pic} />}
         <label for="file-input" style={{alignSelf:'center',cursor:'pointer',marginTop:'1rem'}}>
           <AddCircleOutlineIcon sx={{fontSize:'3rem',color:'#363062'}}/>
         </label>
         <input id="file-input" type='file' style={{display:"none"}} onChange={(e)=>handlePic(e.target.files[0])}/>
-        <TextField value={name} sx={{width:'40%',alignSelf:'center',marginBottom:"1rem"}} label="name" onChange={(e)=>setName(e.target.value)}/>
-        <TextField value={email} sx={{width:'40%',alignSelf:'center',marginBottom:"1rem"}} label="email" onChange={(e)=>setEmail(e.target.value)}/>
-        <TextField type='text' value={password} sx={{width:'40%',alignSelf:'center',marginBottom:"1rem"}} label="password" onChange={(e)=>setPassword(e.target.value)}/>
+        <TextField value={name} sx={{width:'40%',alignSelf:'center',marginBottom:"1rem",'@media(max-width:850px)':{width:'60%'},'@media(max-width:600px)':{width:'70%'},'@media(max-width:350px)':{width:'80%'}}} label="name" onChange={(e)=>setName(e.target.value)}/>
+        <TextField value={email} sx={{width:'40%',alignSelf:'center',marginBottom:"1rem",'@media(max-width:850px)':{width:'60%'},'@media(max-width:600px)':{width:'70%'},'@media(max-width:350px)':{width:'80%'}}} label="email" onChange={(e)=>setEmail(e.target.value)}/>
+        <TextField type='text' value={password} sx={{width:'40%',alignSelf:'center',marginBottom:"1rem",'@media(max-width:850px)':{width:'60%'},'@media(max-width:600px)':{width:'70%'},'@media(max-width:350px)':{width:'80%'}}} label="password" onChange={(e)=>setPassword(e.target.value)}/>
         <Button sx={{width:"8%",alignSelf:'center',marginBottom:"1rem"}} variant="contained" onClick={handleSubmit} disabled={loading}>Submit</Button>
     </div>
   )

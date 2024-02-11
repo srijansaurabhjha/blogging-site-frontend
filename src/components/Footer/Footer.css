@@ -1,5 +1,4 @@
 .footer{
-   
     color: black;
     display: flex;
     align-items: center;
@@ -7,4 +6,12 @@
     height: 6vh;
     font-size: 1rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+@media screen and (max-width:450px){
+    .footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

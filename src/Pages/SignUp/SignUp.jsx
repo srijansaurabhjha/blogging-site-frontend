@@ -90,7 +90,7 @@ const SignUp = () => {
 
   return (
     <Box sx={{display:'flex',height:'calc(100vh - 6vh - 12vh)',justifyContent:'center',alignItems:'center'}}>
-    <Box sx={{display:'flex',flexDirection:'column',width:'30%',textAlign:'center',padding:'3rem',backdropFilter:'blur(10px)',boxShadow:'0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',borderRadius:'4rem',alignItems:'center'}}>
+    <Box sx={{display:'flex',flexDirection:'column',width:'30%',textAlign:'center',padding:'3rem',backdropFilter:'blur(10px)',boxShadow:'0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',borderRadius:'4rem',alignItems:'center','@media(max-width:900px)':{width:'50%'},'@media(max-width:600px)':{width:'70%'},'@media(max-width:450px)':{width:'50%'}}}>
       <TextField label='Name' variant='standard' sx={{marginBottom:'2rem',width:'100%'}} onChange={(e)=>setName(e.target.value)} value={name}/>
       <TextField label='Email' variant='standard' sx={{marginBottom:'2rem',width:'100%'}} onChange={(e)=>setEmail(e.target.value)} value={email}/>
       <TextField label='Password' variant='standard' sx={{marginBottom:'2rem',width:'100%'}} onChange={(e)=>setPassword(e.target.value)} value={password}/>

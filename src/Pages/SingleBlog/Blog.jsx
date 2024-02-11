@@ -36,7 +36,7 @@ const Blog = () => {
           </>
         }
      </div>
-     {selectedBlog.file&&<img src={selectedBlog.file} style={{height:'20rem',alignSelf:'center',borderRadius:'2rem',marginTop:'2rem',marginBottom:'2rem'}}/>}
+     {selectedBlog.file&&<img src={selectedBlog.file} style={{height:'20rem',alignSelf:'center',borderRadius:'2rem',marginTop:'2rem',marginBottom:'2rem',maxWidth:'90%'}}/>}
      <pre className='content'>{selectedBlog.desc}</pre>
     </div>
   )

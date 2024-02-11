@@ -42,19 +42,19 @@ const Header = () => {
           <>
           <Tooltip title='profile'>
           <Link to={'/profile'}>
-          <Avatar sx={{ height: "6vh", width: "6vh" }} src={loggedIn.pic}/>
+          <Avatar sx={{ height: "6vh", width: "6vh" ,marginRight:'1rem'}} src={loggedIn.pic}/>
           </Link>
           </Tooltip>
         
-          <button style={{backgroundColor:'black',padding:'0.2rem'}} onClick={handleLogOut}><LogoutIcon sx={{color:'white',cursor:'pointer'}}/></button>
+          <button style={{backgroundColor:'black',padding:'0.2rem',marginRight:'1rem'}} onClick={handleLogOut}><LogoutIcon sx={{color:'white',cursor:'pointer'}}/></button>
           </>
         ) : (
-          <div style={{display:'flex',alignItems:'center'}}>
-            <Link to={'/signUp'} style={{padding:'0.5rem',fontSize:'1rem',fontFamily:'monospace',marginRight:'0.5rem',backgroundColor:'#352F44',color:'white',textDecoration:'none'}}>
-                Sign Up
+          <>
+            <Link className="removeMargin" to={'/signUp'} style={{padding:'0.5rem',fontSize:'1.2em',fontFamily:'monospace',marginRight:'1rem',backgroundColor:'#352F44',color:'white',textDecoration:'none'}}>
+                SignUp
             </Link>
-            <Link to={'/login'} style={{padding:'0.5rem',fontSize:'1rem',fontFamily:'monospace',backgroundColor:'#352F44',color:'white',textDecoration:'none'}}>Login</Link>
-          </div>
+            <Link className="removeMargin" to={'/login'} style={{padding:'0.5rem',fontSize:'1.2em',fontFamily:'monospace',backgroundColor:'#352F44',color:'white',textDecoration:'none',marginRight:'1rem'}}>Login</Link>
+          </>
         )}
       </div>
     </div>

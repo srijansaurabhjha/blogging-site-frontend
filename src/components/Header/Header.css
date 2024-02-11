@@ -3,7 +3,7 @@
     height: 12vh;
     position: sticky;
     top:0;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .top_left{
@@ -37,10 +37,11 @@
 }
 
 .top_right{
-    flex: 1;
+    flex: 2;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+
+    justify-content: center;
 }
 
 .top_right_btn{
@@ -48,8 +49,51 @@
     background-color: #5C5470;
     cursor: pointer;
     border: none;
+    margin-right: 1rem;
 }
 
 .top_right>button:active{
     transform: scale(0.9);
+}
+
+@media screen and (max-width:500px){
+    .header{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 24vh;
+    }
+    .top_left{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+    .top_center{
+        flex: 1;
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        padding-right: 0;
+    }
+    .top_right{
+        flex: 1;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .top_center> input{
+        width: 70%;
+        border-bottom: 1px solid #363062;
+    }
+
+    .removeMargin{
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width:450px){
+    .header{
+        height: 20vh;
+    }
 }

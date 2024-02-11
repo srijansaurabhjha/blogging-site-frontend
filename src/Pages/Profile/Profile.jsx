@@ -16,13 +16,13 @@ const Profile = () => {
 
   return (
     <div style={{height:'calc(100vh - 6vh - 12vh)',display:'flex',alignItems:'center',justifyContent:'center'}}>
+      <div style={{backdropFilter:'blur(10px)',overflow:'hidden',display:'flex',flexDirection:'column'}}>
+        <img className="profile_img" src={loggedIn?.pic} alt='#'/>
       <Tooltip title="Edit">
-        <Button sx={{position:'absolute',top:'9rem',right:'20rem',borderRadius:'20%',fontSize:'1rem'}} variant='contained' onClick={handleClick}>
+        <Button sx={{borderRadius:'20%',fontSize:'1rem',alignSelf:'flex-end',marginBottom:'0.5rem'}} variant='contained' onClick={handleClick}>
            <EditIcon />
         </Button>
       </Tooltip>
-      <div style={{backdropFilter:'blur(10px)',overflow:'hidden',display:'flex',flexDirection:'column'}}>
-        <img src={loggedIn?.pic} alt='#' style={{height:'50vh',overflow:'hidden',alignSelf:'center',marginBottom:'1rem',borderRadius:'1rem'}}/>
         <div style={{fontSize:'1.5rem',fontFamily:'monospace',backgroundColor:'#FFEBD8',display:'flex',alignItems:'center',justifyContent:'center',padding:'1rem'}}>{loggedIn?.name}</div>
         <div style={{fontSize:'1.5rem',fontFamily:'monospace',backgroundColor:'#FFC5C5',display:'flex',alignItems:'center',justifyContent:'center',padding:'1rem'}}>{loggedIn?.email}</div>
       </div>
